@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  padding: 24px 16px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+select,
+button {
+  background: var(--white-background);
+  border: 1px solid var(--light-text);
+  border-radius: 8px;
+  padding: 4px;
+}
+
+button {
+  background: none;
+}
+
+img {
+  display: flex;
+  position: relative;
+  left: 144px;    
+  bottom: 80px;
+  height: 100px;
+  width: 100px;
+}
+
+div #pokeBox button {
+
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  
+}
+
+
