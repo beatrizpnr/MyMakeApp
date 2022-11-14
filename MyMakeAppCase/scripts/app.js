@@ -49,19 +49,7 @@ async function retrieveData() {
 
 
   function toHTML(products) {
-    // return `
-    //     <a href="#" class="card-wrapper">
-    //       <div class="card" style="border-color: var(--grass);">
-    //         <div class="card-id" style="color: var(--grass);">${poke.id}</div>
-    //         <div class="card-image">
-    //           <img alt="${poke.name}" src=${poke.picture}">
-    //         </div>
-    //       </div>
-    //       <div class="card-name" style="background-color: var(--grass);">
-    //         ${poke.name}
-    //       </div>
-    //     </a>
-    // `;
+    
     return `
     <div>
         <div>        
@@ -89,7 +77,6 @@ async function retrieveData() {
 retrieveData();
 
 
-
 async function saveFormData(event) {
   event.preventDefault();
   const form = event.target;
@@ -103,12 +90,9 @@ async function saveFormData(event) {
 
   retrieveData();
   form.reset();
-  form.name.focus();
+  form.focus();
   return false;
 }
-
-
-
 
 async function saveOnDatabase({  category, type, name, brand, color }) {
   const product = await db.product.where("name").equals(name).toArray();
@@ -121,20 +105,14 @@ async function saveOnDatabase({  category, type, name, brand, color }) {
       color,
       picture: buildUrl(type),
     });
+    
   }
-}
 
+}
 
 const form = document.querySelector("form");
 form.addEventListener("submit", saveFormData);
-
-
-const pokeBox = document.getElementById("pokeBox");
-const poke = document.createElement("div");
-const button = document.createElement('button');
-poke.appendChild(button);
-pokeBox.appendChild(poke);
-
+const button = document.querySelector('button');
 button.addEventListener('click', function(){             
 console.log("add");
 

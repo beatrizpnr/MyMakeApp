@@ -1,14 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Product</title>
-</head>
-<body>
-
-    Add Product
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>MyMakeAPP - Add Product</title>
+    <link rel="stylesheet" href="./style/addProduct.css" />
+    <script src="./scripts/app.js" type="module" defer></script>
+  </head>
+  <body>
+      <div class="case">
+        <h1>My MakeAPP Case</h1>
+        <form id="form-case">
+          <label>Categoria</label>
+            <select name="category">
+            <option value="Lábios">Lábios</option>
+            <option value="Olhos">Olhos</option>
+            <option value="Pele">Pele</option>        
+            <option value="Pincéis">Pincéis</option>
+        </select>
+        <label>Tipo</label>
+        <select name="type">
+            <option value="Pó_Facial">Pó Facial</option>
+            <option value="blush">Blush</option>
+            <option value="base">Base</option>
+            <option value="batom">Batom</option>
+            <option value="esponja">Esponja</option>
+            <option value="pincel-de-boca">Pincel de boca </option>
+            <option value="pincel-de-olho">Pincel de olhos</option>
+            <option value="rimel">Rímel</option>
+            <option value="sombra">Sombra</option>
+        </select>
+          <label>
+            Nome: <input type="text" name="name" required />
+          </label>
+          <label>
+            Marca: <input type="text" name="brand" required />
+          </label>
+          <label>
+            Cor: <input type="text" name="color" required />
+          </label>
+          <button>Add</button>
+        </form> 
+      </div>
+      <section>
+        
+      </section>
+      
+      </div>
+  </body>
 </html>
