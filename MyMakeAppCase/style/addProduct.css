@@ -12,7 +12,7 @@ body {
   min-height: 100vh;
   min-width: 100vw;
   padding: 24px 16px;
-  background-image: url(/MyMakeAppCase/images/bkg.png);
+  background-image: url(/images/bkg.png);
   gap: 50px;
 }
 
