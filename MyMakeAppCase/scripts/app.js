@@ -25,7 +25,7 @@ db.on("populate", async () => {
       picture: await buildUrl("Blush"),
     },
   ]);
-  retrieveData();
+  
 });
 
 
@@ -35,47 +35,6 @@ function buildUrl(nameproduct) {
   return `./images/${nameproduct}.png`;
   
 }
-
-
-
-async function retrieveData() {
-  const productList = await db.product.toArray();
-
-  const section = document.querySelector("section");
-  const productHTML = productList.map(toHTML).join("");
-  section.innerHTML = productHTML;
-  document.body.appendChild(section);
-
-
-
-  function toHTML(products) {
-    
-    return `
-    <div>
-        <div>        
-            ${products.id}
-        </div>
-        <div>        
-            ${products.category}
-        </div>
-        <div>        
-            ${products.name}
-        </div>
-        <div>        
-            ${products.brand}
-        </div>
-        <div>        
-             ${products.color}
-        </div>
-        <div>        
-            <img src=${products.picture}>
-        </div>
-    </div>
-    `;
-  }
-}
-retrieveData();
-
 
 async function saveFormData(event) {
   event.preventDefault();
@@ -87,8 +46,7 @@ async function saveFormData(event) {
     brand: form.brand.value,
     color: form.color.value,
   });
-
-  retrieveData();
+  
   form.reset();
   form.focus();
   return false;
@@ -110,12 +68,13 @@ async function saveOnDatabase({  category, type, name, brand, color }) {
 
 }
 
-const form = document.querySelector("form");
-form.addEventListener("submit", saveFormData);
-const button = document.querySelector('button');
-button.addEventListener('click', function(){             
-console.log("add");
+try {
+  const form = document.querySelector("form");
+  form.addEventListener("submit", saveFormData);
+} catch (error) {
+    console.log('bypass error');
 
-});
+}
 
 
+export default db;

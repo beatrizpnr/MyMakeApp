@@ -6,47 +6,80 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-height: 100vh;
   min-width: 100vw;
   padding: 24px 16px;
+  background-image: url(/MyMakeAppCase/images/bkg.png);
+  gap: 50px;
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-}
+
 
 input,
-select,
-button {
-  background: var(--white-background);
-  border: 1px solid var(--light-text);
+select {
+  background-color: lightgrey;
+  border: 1px solid;
   border-radius: 8px;
   padding: 4px;
 }
 
-button {
-  background: none;
+label {
+
+  color:aliceblue
 }
 
-img {
+.divheader {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+}
+
+#back-arrow img {
+
+  width: 25px;
+  height: 25px;
+  position: relative;
+  right: 80px;
+
+}
+
+button {
+
+
+ width: 75px;
+ height: 50px;
+ border-radius: 8px;
+ padding: 4px;
+ background-color: black;
+ color: white;
+ align-self: center;
+
+}
+
+/* img {
   display: flex;
   position: relative;
   left: 144px;    
   bottom: 80px;
   height: 100px;
   width: 100px;
-}
+} */
 
-div #pokeBox button {
+form {
 
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  background-color: transparent;
-  outline: none;
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+  min-width: 70vw;  
   
+
 }
+
 
 

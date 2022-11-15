@@ -16,20 +16,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>MyMakeAPP - Add Product</title>
     <link rel="stylesheet" href="./style/addProduct.css" />
-    <script src="./scripts/app.js" type="module" defer></script>
+    <script src="./scripts/app.js" type="module"></script>
   </head>
   <body>
+    <div class="divheader">
+      <a id="back-arrow" href="./index.html">
+        <img src="./images/back-svgrepo-com.svg" alt="back">
+      </a>
+      <h1>My MakeAPP Case</h1>
+    </div>
+
       <div class="case">
-        <h1>My MakeAPP Case</h1>
         <form id="form-case">
-          <label>Categoria</label>
+          <label>Categoria:</label>
             <select name="category">
             <option value="Lábios">Lábios</option>
             <option value="Olhos">Olhos</option>
             <option value="Pele">Pele</option>        
             <option value="Pincéis">Pincéis</option>
         </select>
-        <label>Tipo</label>
+        <br>
+        <br>        
+        <label>Tipo:</label>
         <select name="type">
             <option value="Pó_Facial">Pó Facial</option>
             <option value="blush">Blush</option>
@@ -41,22 +49,33 @@
             <option value="rimel">Rímel</option>
             <option value="sombra">Sombra</option>
         </select>
+        <br>
+        <br>
           <label>
-            Nome: <input type="text" name="name" required />
+            Nome:
           </label>
+          <input type="text" name="name" required />
+          <br>
+          <br>
           <label>
-            Marca: <input type="text" name="brand" required />
+            Marca:
           </label>
+          <input type="text" name="brand" required />
+          <br>
+          <br>
           <label>
-            Cor: <input type="text" name="color" required />
+            Cor: 
           </label>
+          <input type="text" name="color" required />
+          <br>
+          <br>
           <button>Add</button>
         </form> 
       </div>
-      <section>
+      <!-- <section>
         
-      </section>
+      </section> -->
       
-      </div>
+      
   </body>
 </html>
