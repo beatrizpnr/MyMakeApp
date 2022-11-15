@@ -14,7 +14,7 @@ db.on("populate", async () => {
       name: "Pó Solto Facial",
       brand: "Boca Rosa Beauty",
       color: "Claro",
-      picture: await buildUrl("Pó_Facial"),
+      picture: await buildUrl("pofacial"),
      },
     {
       category: "Pele",
