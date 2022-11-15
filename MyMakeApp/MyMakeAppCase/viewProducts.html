@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="./style/viewProduct.css">
+    <script src="./scripts/queryMake.js" type="module"></script>
+</head>
+<body>
+
+    <header>
+        <a id="back-arrow" href="./index.html">
+            <img src="./images/back-svgrepo-com.svg" alt="back">
+          </a>
+        <h1>Produtos</h1>        
+    </header>
+
+    <form id="form-case">
+        <h2>
+        Delete ID:   
+        <label>
+            <input type="number" name="idvalue" placeholder="Pick a ID">
+        </label>
+        <button>Delete</button>
+        </h2>
+    </form>
+
+
+    <div class="product-content">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Categoria</th>
+                    <th>Marca</th>
+                    <th>Cor</th>
+                    <th>Imagem</th>
+                </tr>
+            </thead>
+            <tbody id="section">
+
+
+
+            </tbody>
+
+
+
+        </table>
+    </div>
+
+
+
+    
+
+
+</body>
+</html>
