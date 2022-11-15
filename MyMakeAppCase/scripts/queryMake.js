@@ -21,4 +21,28 @@ async function retrieveData() {
     `;
     }
   } 
-  retrieveData();
+
+
+
+
+async function deletedb(event){
+
+    event.preventDefault();
+    const form = event.target;    
+    const id = parseInt(form.idvalue.value);    
+    await db.product.where('id').equals(id).delete();
+    retrieveData();
+    form.reset(); 
+    return false;
+}
+
+const form = document.getElementById('form-case');
+form.addEventListener('submit', deletedb);
+retrieveData();
+
+
+
+ 
+
+
+
